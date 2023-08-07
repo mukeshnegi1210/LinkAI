@@ -43,14 +43,14 @@ $(function () {
   // scroll top ends ===============================
 
   $('.menu-open').click(function () {
-    $('.primary-menu-outer').addClass('active');
+    $('.primary-menu-wrapper').addClass('active');
   })
   $('.menu-close').click(function () {
-    $('.primary-menu-outer').removeClass('active');
+    $('.primary-menu-wrapper').removeClass('active');
   })
   // block scroll ===============================
   $('.primary-menu li a').click(function () {
-    $('.primary-menu-outer').removeClass('active');
+    $('.primary-menu-wrapper').removeClass('active');
     var get_scroll_id = $(this).attr('data-scroll');
     $('.primary-menu li a').removeClass("active");
     $(this).addClass("active");
@@ -70,6 +70,10 @@ $(function () {
 
   }
 
+  AOS.init({
+    delay: 200,
+    duration: 800
+});
 })
 
 $(window).on('load', function () {

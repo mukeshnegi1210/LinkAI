@@ -196,7 +196,7 @@ h6,
   left: 0;
   height: 4px;
   width: 100px;
-  background: linear-gradient(72deg, rgba(0, 118, 227, 1) 0%, rgba(205, 64, 255, 1) 100%);
+  background: linear-gradient(72deg, rgba(0, 118, 227, 1) 0%, rgb(205, 64, 255) 100%);
   border-radius: 2px;
   display: inline-block;
 }
@@ -256,9 +256,11 @@ h6,
 .bg-light {
   background-color: #f2f2f2 !important;
 }
-.bg-gradient{
+
+.bg-gradient {
   background: linear-gradient(72deg, #0076e3 0%, #cd40ff 100%);
 }
+
 /*************Font Weight****************/
 
 .font-weight-light {
@@ -319,6 +321,7 @@ h6,
 .container {
   max-width: 1200px;
   padding: 0 15px;
+  overflow: hidden;
 }
 
 /*****************************/
@@ -360,13 +363,13 @@ h6,
   transition: all 0.5s ease 0s;
   width: 50px;
   z-index: 999;
-  background: linear-gradient(180deg, #107fe6 0%, #a734cf 100%); 
+  background: linear-gradient(180deg, #107fe6 0%, #a734cf 100%);
   opacity: 0.8;
 }
 
 .scrollToTop:hover,
 .scrollToTop:focus {
-  background: linear-gradient(180deg, #107fe6 0%, #a734cf 100%); 
+  background: linear-gradient(180deg, #107fe6 0%, #a734cf 100%);
   text-decoration: none;
   outline: none;
   opacity: 1;
@@ -402,7 +405,7 @@ h6,
   height: 80px;
   border-radius: 500px;
   position: absolute;
-  border: 5px solid #D81405;
+  border: 5px solid #a734cf;
 }
 
 .pulse:before {
@@ -521,7 +524,7 @@ h6,
 
 
 .form-control {
-  background-color: rgba(255, 255, 255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid transparent;
   border-radius: 10;
   border: 0;
@@ -531,6 +534,18 @@ h6,
 .form-control:focus {
   box-shadow: none;
   outline: none;
-  
 
+
+}
+
+@media(max-width:767px) {
+  .title {
+    text-align: center;
+  }
+
+  .title::before {
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
 }
